@@ -1,0 +1,189 @@
+/*imported google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
+
+html{font-family: "Nunito", sans-serif;} /*sets font of whole page to 'Nunito'*/
+
+/*formatting specific elements of the page*/
+h1 {
+    font-size: 80px;
+}
+body {
+    background-color: #FFFEE9;
+    font-size: 18px;
+}
+h2 {
+    font-size: 30px;
+    padding: 0px;
+}
+
+/* ~~~~~ recipe name + image ~~~~~ */
+.name {   
+    border: 5px solid #939946;
+    border-radius: 0px 0px 50px 50px; /*bottom corners rounded*/
+    /*format text*/
+    color: #939946;
+    font-family: "DynaPuff", system-ui;
+    font-style: normal;
+    font-size: 50px;
+}
+.name img{ /*formats the image under class 'title'*/
+    border-radius: 0px 0px 50px; /*bot-right corner rounded*/
+    
+    /*resize*/    
+    width: 980px;
+    height: 500px;
+
+    /*align right*/
+    display: block;
+    float: right;
+    margin-top: -500px;
+    margin-bottom: 0px;
+}
+.n { /*recipe name (h1) spacing format*/
+    width: 100px;
+    margin-left: 130px;
+    padding: 0px;
+    display: inline-block;
+}
+
+/* ~~~~~ div for puting description and ingredients side by side ~~~~~ */
+.DIS{ /*parent div for recipe description, ingredients, and steps*/
+    text-align: center;
+}
+.dis{ /*child div*/
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* ~~~~~ recipe description ~~~~~ */
+.description { /*h2 description format*/
+    background-color: #939946;
+    border: 5px solid #939946;
+    border-radius: 50px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 370px;
+    text-align: center;
+    color: white;
+}
+.d { /*description p*/
+    border: 5px solid #939946;
+    border-radius: 50px;
+    width: 660px;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: -50px;
+    margin-left: 100px;
+    text-align: left;
+}
+
+/* ~~~~~ ingredients ~~~~~ */
+.Ingredients { /*h2 ingredients format*/
+    background-color: #876C50;
+    border: 5px solid #876C50;
+    border-radius: 50px;
+    width: 200px;
+    margin-top: 200px;
+
+    text-align: center;
+    color: white;
+}
+.i { /*ingredients li format*/
+    border-radius: 40px;
+    border: 5px solid #876C50;
+    width: 60%;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    margin-top: -50px;
+    margin-left: -30px;
+    text-align: left;
+}
+
+
+/* ~~~~~ steps ~~~~~ */
+.Steps{ /*parent div of the steps*/
+    background-color: #DEE15E;
+    border: 5px solid #DEE15E;
+    border-radius: 50px;
+    width: 200px;
+    margin-top: 30px;
+    margin-left: 370px;
+    text-align: center;
+}
+.sBlock { /*div block format of each step*/
+    background-image: url('img/bg00.png');
+    background-color: white;
+    border: 7px solid #DEE15E;
+    border-radius: 50px;
+    max-width: 80%;
+    padding-top: 30px;
+
+    text-align: center; 
+    margin-bottom: 20px; /*to add a space before the next step*/
+    margin-left: 40px;
+}
+/*formats steps images*/
+.s { 
+    display: inline-block; /*to display images beside each other*/
+    padding: 2.5px;
+}
+.s img {
+    width: 220px;
+    height: 160px;
+    border-radius: 30px 30px 50px 50px;
+    padding-bottom: 20px; /*space after images*/
+}
+/*formatting ol bullets because text is centered*/
+ol li {
+    background-color: #DEE15E;
+    border-radius: 0px 0px 40px 40px;
+    max-width: 800px;
+    padding-top: 25px; /*adds space before instruction*/
+    padding-bottom: 20px; /*adds space after instruction*/
+    padding-left: 50px;
+    padding-right: 50px;
+    text-align: center;
+    list-style-position: inside; /*so that the bullet is not stuck to the left of the screen and is instead nearer to the text*/
+}
+
+/* ~~~~~ footer ~~~~~ */
+footer {
+    background-color: #939946;
+    margin-top: 30px;
+    border-radius: 50px 50px 0px 0px; /*top corners rounded*/
+    text-align: center;
+}
+footer img { /*formats the image in footer*/
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: none;
+}
+footer p { /*formats paragraphs in footer*/
+    padding-top: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFEE9;
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+/*format links*/
+a {
+    text-decoration: none; /*removes underline*/
+    color: #876C50;
+    margin: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+a:hover { /*change hover color*/
+    color: #FFFEE9; 
+}
