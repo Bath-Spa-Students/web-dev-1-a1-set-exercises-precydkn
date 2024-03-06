@@ -1,0 +1,22 @@
+/*body{
+    background-image: url(images/bg2.png);
+    background-repeat: no-repeat;
+}*/
+
+/*heading 1 text design*/
+#top {
+    color: yellowgreen; 
+    text-align: center;
+    border: white;
+    border-radius: 10px;
+    border-style: solid;
+    background-color: white;
+}
+
+.heading {
+    text-align: center;
+    background-color: greenyellow;
+    border: 5px solid green;
+    border-width: 5px;
+    width: 75px;
+}
