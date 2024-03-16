@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap'); /*'Averia Serif Libre'*/
+body{
+    font-family: 'Averia Serif Libre', serif;
+    text-align: center;
+    background-color: darkkhaki;
+}
+.flex {display: flex;} /*aligning images horizontally*/
+figcaption {
+    text-align: center;
+    margin-top: 30px;
+}
+span {/*for img captions*/
+    font-size: 24px;
+    display: block; /*so no need for <br> after caption*/
+}
+a{/*link format*/
+    color: darkolivegreen;
+    text-decoration: none;
+}
+a:hover{/*link when hovered*/
+    color: forestgreen;
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 40px;
+    animation: title-appear 1.5s; /*animation-name, duration*/
+}
+img {width: 100%;} /*adjusting full size of image to not exceed the div*/
+.left {/*filters for left img*/
+    filter: drop-shadow(-20px 20px 30px black) hue-rotate(35deg); /*shadow is at bot-left; light becomes cooler and greener*/
+}
+.mid {/*filters for middle img*/
+    filter: drop-shadow(0 20px 30px black) hue-rotate(55deg); /*shadow is at bot; light becomes cooler and greener*/
+}
+.right {/*filters for right img*/
+    filter: drop-shadow(20px 20px 30px black) hue-rotate(55deg); /*shadow is at bot-right; light becomes cooler and greener*/
+}
+
+/*for div (so figcaptions are included in animation)*/
+#left {animation: appear 2s;} /*left img*/
+#mid {/*middle img*/
+    opacity: 0; /*so it's invisible upon load*/
+    animation: appear 2s 0.5s; /*animation-name, duration, delay (after left img)*/
+    animation-fill-mode: forwards; /*so img will not revert to 0 opacity*/
+}
+#right {
+    opacity: 0; /*so it's invisible upon load*/
+    animation: appear 2s 1s; /*animation-name, duration, delay (after mid img)*/
+    animation-fill-mode: forwards; /*so img will not revert to 0 opacity*/
+}
+
+/*==========animations==========*/
+@keyframes appear {/*image will fade-in while floating up*/
+    from {opacity: 0; transform: translate(0,30px);} /*starts image with 0 opacity and position lower than its final position*/
+    to {opacity: 100%; transform: translate(0,0);} /*image will be fully opaque and at the intended position*/
+}
+@keyframes title-appear {
+    from {opacity: 0; transform: translate(0,-30px);} /*starts title with 0 opacity and position higher than its final position*/
+    to {opacity: 100%; transform: translate(0,0);} /*title will be fully opaque and at the intended position*/
+}
+
+hr {
+    border: 1px solid darkolivegreen; /*change hr appearance*/
+    width: 500px; /*make it short*/
+    margin-top: 100px;
+    margin-bottom: 30px;
+}
+footer {margin-bottom: 30px;}
