@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap'); /*"Work Sans" font*/
+@font-face {
+    font-family: "Shippori Gothic B2 Font";
+    src: url('assets/ShipporiGothicB2-Bold.ttf');
+} /*downloaded font for the japanese text*/
+
+/*formatted html for the scroll formats*/
+html{
+    scroll-behavior: smooth; /*smooth scroll movement when clicking anchors*/
+    scroll-padding-top: 90px; /*prevents navbar from covering target section*/
+} 
+body { /*whole page format*/
+    background-color: #CBDDF3; 
+    background-image: linear-gradient(#CBDDF3, #234189);
+    background-repeat: no-repeat; /*for developing purposes*/
+    font-family: "Work Sans", sans-serif;
+}
+
+/*==========navbar==========*/
+nav {
+    /*display and justify-content are used to easily position navbar while keeping sticky position*/
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 50px 10% 20px 30%; /*top right bot left*/
+    padding: 15px;
+    backdrop-filter: blur(10px); /*bg blur*/
+    border-radius: 10px;
+    
+    /*make navbar stay even while scrolling*/
+    position: sticky;
+    top: 0;
+}
+nav a{ /*links (from nav and footer)*/
+    color: black;
+    text-decoration: none; /*remove underline*/
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: 15px;
+    margin-left: 15px;
+    display: inline-block; /*border format will be correct; links will be displayed in one line*/
+    transition: 0.4s; /*makes animation smooth*/
+}
+nav a:hover{ /*links when hovered*/
+    background-color: #234189;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+}
+nav a:active{ /*links when being clicked*/
+    color: #4F95D0;
+}
+.selected{ /*current page from navbar buttons that is clicked*/
+    background-color: #234189;
+    color: white;
+    font-weight: bold;
+    border: 1px solid white;
+    pointer-events: none; /*so mouse will stay as an arrow and a:active is disabled*/
+}
+
+/*==========main page title==========*/
+.title {
+    margin: 0px;
+    margin-left: 80px;
+    /*make text stay even while scrolling*/
+    position: sticky;
+    top: 0px;
+    float: left;
+}
+.title h1 {
+    font-family: "Shippori Gothic B2 Font", "Work Sans", sans-serif;
+    font-size: 100px;
+    line-height: 100px;
+}
+.title h2 {
+    font-family: "Shippori Gothic B2 Font", "Work Sans", sans-serif;
+    font-size: 35px;
+    line-height: 40px;
+    /*formatting the english title text to be occupy the space from the japanese title*/
+    position: absolute;
+    top: 33px;
+    left: 120px;
+}
+
+/*==========sections==========*/
+/*parent of all page sections*/
+section {
+    margin-left:30%;
+    margin-right: 10%;
+    background-color: #EDF3FB;
+    padding: 0 50px 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 970px;
+}
+section div{margin-top:50px; margin-bottom: 50px;} /*space for each sect*/
+.table-right { /*to right align text of second td*/
+    text-align: right;
+}
+.characters, .production th, td { /*creative team content format*/
+    vertical-align: top;
+    padding-bottom: 15px;
+    line-height: 25px;
+}
+.production table{width: 54%;}
+.characters table{width: 50%;}
+/*reviews sect*/
+blockquote { 
+    color: #234189;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+span{
+    color: #234189;
+}
+
+/*==========sources==========*/
+.source table, tr, td{column-width: 300px;} /*table (where sources are) format*/
+.sources p{color: gray;} /*link indicator*/
+.sources a{/*link format*/
+    color: #4F95D0;
+    text-decoration: none; /*removes underline*/
+    margin-bottom: 10px;
+    display: inline-block; /*so margins will work*/ 
+    transition: 0.4s; /*makes animation smooth*/
+}
+.sources a:hover{color: #234189;} /*link is hovered*/
+.sources a:active{color: white;} /*link is clocked*/
+
+/*==========footer==========*/
+footer {
+    text-align: center;
+    margin: 100px 10% 30px 30%;
+    color: white;
+}
+
+hr { /*hr format*/
+    width: 50%; 
+    margin: 0; /*to left align*/
+}
