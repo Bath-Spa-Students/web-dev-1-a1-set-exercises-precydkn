@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & CSS Resources</title>
+    <link rel="icon" type="image--" href="img/icon.png">
+    <link rel="stylesheet" href="Reference Guide-CSS.css"> <!--link the stylesheet-->
+</head>
+<body>
+    <!--title-->
+    <div class="title">
+        <h1>HTML & CSS Resources</h1>
+        <!--<p>This is a quick-reference guide about all of the tags we have covered so far (and a few extras) with a description of how to use them and code examples.</p>-->
+    </div>
+
+    <!--====================section list dropdown (✦)====================-->
+    <div class="✦">
+        <p>✦</p>
+        <div class="section-list"> <!--sections in the page-->
+            <div class="HTML-list">
+                <a href="#HTML"><span>HTML</span></a>
+                <div class="HTML-content">
+                    <a href="#HTML Structure">HTML Page Structure</a>
+                    <a href="#Heading Element">Heading Element</a>
+                    <a href="#Paragraph Element">Paragraph Element</a>
+                    <a href="#Image Element">Image Element</a>
+                    <a href="#Anchor Element">Anchor Element</a>
+                    <a href="#Div Element">Div Element</a>
+                    <a href="#Blockquote Element">Blockquote Element</a>
+                    <a href="#Line Break Element">Line Break Element</a>
+                    <a href="#Horizontal Line Element">Horizontal Line Element</a>
+                    <a href="#Span Element">Span Element</a>
+                    <a href="#Phrase Elements">Phrase Elements</a>
+                    <a href="#Lists">Lists</a>
+                </div>
+            </div> 
+            <div class="CSS-list">
+                <a href="#CSS"><span>CSS</span></a>
+                <div class="CSS-content">
+                    <a href="#CSS Structure">CSS Structure</a>
+                    <a href="#Inline CSS">Inline CSS</a>
+                    <a href="#Internal/Embedded CSS">Internal/Embedded CSS</a>
+                    <a href="#External CSS">External CSS</a>
+                    <a href="#Imported CSS">Imported CSS</a>
+                    <a href="#The Box Model">The Box Model</a>
+                    <a href="#Selectors">Selectors</a>
+                    <a href="#Properties">Properties</a>
+                    <a href="#Width & Height">Width & Height</a>
+                    <a href="#Color">Color & Background Color</a>
+                    <a href="#Background Image">Background Image</a>
+                    <a href="#Borders">Border & Border Radius</a>
+                    <a href="#Text Properties">Text Properties</a>
+                    <a href="#Font Properties">Font Properties</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====================HTML GUIDE====================-->
+    <!--note: all <pre> tags are not indented so they are also not indented in the output-->
+    <h2 id="HTML" class="headings">HyperText Markup Language (HTML)</h2>
+    <div class="explain">
+        <p>
+            HTML is the standard markup language used to create Web pages. It defines the structure of the page through elements. 
+            <ul>
+                <li><span>Container tags</span> have opening and closing tags. Most elements have these.</li>
+                <li><span>Empty tags</span> do not have closing tags.</li>
+            </ul>
+            <p>All HTML elements have a default display value. The two most common are:</p>
+            <ul>
+                <li><span>Block</span> means the element always starts on a new line and takes up the full width available in the screen.</li>
+                <li><span>Inline</span> means the element does not start on a new line and only takes the width of their content.</li>
+            </ul>
+        </p>
+    </div>
+
+    <!--html syntax-->
+    <div class="section">
+        <h3 id="HTML Structure">HTML Page Structure</h3>
+        <div class="terminal">
+            <div>
+<pre>
+<span>&lt!DOCTYPE</span> <span class="attribute">html</span><span>&gt</span>
+<span>&lthtml</span> <span class="attribute">lang=</span><span class="value">"en"</span><span>&gt</span>
+<span>&lthead&gt</span>
+<span>&ltmeta</span> <span class="attribute">charset=</span><span class="value">"UTF-8"</span><span>&gt</span>
+<span>&ltmeta</span> <span class="attribute">name=</span></span><span class="value">"viewport"</span> <span class="attribute">content=</span></span><span class="value">"width=device-width, initial-scale=1.0"</span><span>&gt</span>
+<span>&lttitle&gt</span>Document Title<span>&lt/title&gt</span>
+<span>&lt/head&gt</span>
+<span>&ltbody&gt</span>
+
+<span>&lt/body&gt</span>
+<span>&lt/html&gt</span>
+</pre>
+            </div> 
+        </div>
+    </div>
+
+    <!--h-->
+    <div class="section">
+        <h3 id="Heading Element">01 | Heading Element</h3>
+        <p>
+            Headings can be used to create sections in a web page. There are six levels of headings in HTML.
+            They are written using the <code>&lth1&gt</code> tag—the most important heading—to <code>&lth6&gt</code> tag—the least important heading.
+        </p>
+        <!--table of headings and its span-->
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&lth1&gt</span>Heading 1<span>&lt/h1&gt</span><br>
+<span>&lth2&gt</span>Heading 2<span>&lt/h2&gt</span><br>        
+<span>&lth3&gt</span>Heading 3<span>&lt/h3&gt</span><br>        
+<span>&lth4&gt</span>Heading 4<span>&lt/h4&gt</span><br>
+<span>&lth5&gt</span>Heading 5<span>&lt/h5&gt</span><br>
+<span>&lth6&gt</span>Heading 6<span>&lt/h6&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <h1>Heading 1</h1>
+                <h2>Heading 2</h2>
+                <h3><span class="h3">Heading 3</span></h3>
+                <h4>Heading 4</h4>
+                <h5>Heading 5</h5>
+                <h6>Heading 6</h6>
+            </div> 
+        </div>
+    </div>
+
+    <!--p-->
+    <div class="section">
+        <h3 id="Paragraph Element">02 | Paragraph Element</h3>
+        <p>The <code>&ltp&gt</code> tag is a block element that allows for displaying text. It ignores whitespaces in the text.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltp&gt</span>
+    The paragraph element is a block element.               &lt—It 
+    ignores whitespaces like these. 
+
+    This enter will also be ignored. 
+<span>&lt/p&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p> The paragraph element is a block element. &lt—It ignores whitespaces like these. This enter will also be ignored. </p>
+            </div>
+        </div>
+    </div>
+
+    <!--img-->
+    <div class="section">
+        <h3 id="Image Element">03 | Image Element</h3>
+        <p>
+            The <code>&ltimg&gt</code> tag is an inline-element allows for inserting images in the web page. When images don't load, 
+            an alternate text will be displayed which can be set in the <code class="attribute">alt</code> attribute.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltimg</span> <span class="attribute">src=</span> <span class="value">"img/toro shark.jpg"</span> <span class="attribute">alt=</span> <span class="value">"Toro Inoue in a shark outfit"</span><span>&gt</span>
+</pre><br><br><br><br><br><br><br><br>
+<pre><span>&ltimg</span> <span class="attribute">src=</span> <span class="value">"https://www.pinterest.com/pin/2181499813863284/"</span> <span class="attribute">alt=</span> <span class="value">"Toro Inoue in a shark outfit"</span><span>&gt</span></pre>
+            </div>
+            <div> <!--code output-->
+                <img src="img/toro shark.jpg" alt="Toro Inoue in a shark outfit" width="200px"><br>
+                <br><img src="https://www.pinterest.com/pin/2181499813863284/" alt="Toro Inoue in a shark outfit" width="200px">
+            </div>
+        </div>
+    </div>
+
+    <!--a-->
+    <div class="section">
+        <h3 id="Anchor Element">04 | Anchor Element</h3>
+        <p>
+            The <code>&lta&gt</code> tag allows for inserting links in the web page. The <code class="attribute">href</code> 
+            attribute is used to indicate the destination of a link.<br>
+            There are two kinds of links: <i>relative</i> and <i>absolute</i>. <i>Relative links</i> lead to a section in a web page, 
+            while <i>absolute links</i> lead to another website.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+    <pre><span>&lta</span> <span class="attribute">href=</span><span class="value">"https://www.w3schools.com/html/"</span><span>></span>W3Schools HTML<span>&lt/a&gt</span></pre>
+            </div>
+            <div> <!--code output-->
+                <p><a href="https://www.w3schools.com/html/">W3Schools HTML</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!--div-->
+    <div class="section">
+        <h3 id="Div Element">05 | Div Element</h3>
+        <p>
+            The <code>&ltdiv&gt</code> tag creates a block of section or division in a web page. It is often used as a container for 
+            different contents. Using <code class="attribute">id</code> or <code class="attribute">class</code> attributes allow for 
+            styling and positioning these divs.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltdiv</span> <span class="attribute">class=</span><span class="value">"div-ex"</span><span>&gt</span>
+    <span>&lth1&gt</span>This is a div.<span>&lt/h1&gt</span>
+    <span>&ltp&gt</span>These divs were styled to show their section/division.<span>&lt/p&gt</span>
+<span>&lt/div&gt</span>
+
+<span>&ltdiv</span> <span class="attribute">class=</span><span class="value">"div-ex2"</span><span>&gt</span>
+    <span>&ltp&gt</span>Here's another div.<span>&lt/p&gt</span>
+<span>&lt/div&gt</span>
+</pre>    
+            </div>
+            <div> <!--code output-->
+                <div class="div-ex">
+                    <h1>This is a div.</h1>
+                    <p>These divs were styled to show their section/division.</p>
+                </div>
+                <div class="div-ex2">
+                    <p>Here's another div.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--blockquote-->
+    <div class="section">
+        <h3 id="Blockquote Element">06 | Blockquote Element</h3>
+        <p>The <code>&ltblockquote&gt</code> tag indents a content. It is usually used when quoting from a source.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltp&gt</span>Toro to Kuro, about having a fighting tournament:<span>&lt/p&gt</span>
+<span>&ltblockquote&gt</span>
+    Kuro! We must be respectful around such legendary humans! And we 
+    should also not be late! Let's go!
+<span>&lt/blockquote&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p>Toro to Kuro, about having a fighting tournament:</p>
+                <blockquote>Kuro! We must be respectful around such legendary humans! And we should also not be late! Let's go!</blockquote>
+            </div>
+        </div>
+    </div>
+
+    <!--br-->
+    <div class="section">
+        <h3 id="Line Break Element">07 | Line Break Element</h3>
+        <p>The <code>&ltbr&gt</code> tag is an empty tag that allows for displaying an element or text in a new line.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltp&gt</span>
+    Sentences without and with line break. 
+    Without line break.<span>&ltbr&gt</span>With line break.
+<span>&lt/p&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p>Sentences without and with line break. Without line break.<br>With line break.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--hr-->
+    <div class="section">
+        <h3 id="Horizontal Line Element">08 | Horizontal Line Element</h3>
+        <p>The <code>&lthr&gt</code> tag creates a horizontal line that automatically takes the entire screen's width by default.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&lthr&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <hr>
+            </div>
+        </div>
+    </div>
+
+    <!--span-->
+    <div class="section">
+        <h3 id="Span Element">09 | Span Element</h3>
+        <p>The <code>&ltspan&gt</code> tag allows for styling of parts of a text.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>This is not in span. <span>&ltspan</span> <span class="attribute">style=</span><span class="value">"color: thistle; font-size: 20px;"</span><span>&gt</span>Span<span>&lt/span&gt</span> is in span.</pre>
+            </div>
+            <div> <!--code output-->
+                This is not in span. <span style="color: thistle; font-size: 20px;">Span</span> is in span.
+            </div>
+        </div>
+    </div>
+
+    <!--phrase elements-->
+    <div class="section">
+        <h3 id="Phrase Elements">10 | Phrase Elements</h3>
+        <p>
+            Phrase elements are tags that allow for formatting texts. Below are the tags and how they are used.<br>
+            <small><i>Note!</i> Italic <i>and</i> bold <i>are different from</i> emphasis <i>and</i> strong <i>in a way that
+                the former don't serve any importance in the content. Screen readers also detect whether</i> emphasis <i>and</i> 
+                strong <i> are used.</i></small>
+        </p>
+        <div class="terminal">
+            <div>
+<pre>
+This is <span>&ltb&gt</span>bold<span>&lt/b&gt</span>.
+This is <span>&lti&gt</span>italicized<span>&lt/i&gt</span>.
+This is <span>&ltem&gt</span>emphasized<span>&lt/em&gt</span>.
+This is <span>&ltstrong&gt</span>strong<span>&lt/strong&gt</span>.
+This is <span>&ltsmall&gt</span>small<span>&lt/small&gt</span>.
+This is <span>&ltmark&gt</span>mark<span>&lt/mark&gt</span>.
+This is <span>&ltsub&gt</span>sub<span>&lt/sub&gt</span>.
+This is <span>&ltsup&gt</span>sup<span>&lt/sup&gt</span>.
+</pre>
+            </div>
+            <div>
+                This is <b>bold</b>.<br>
+                This is <i>italicized</i>.<br>
+                This is <em>emphasized</em>.<br>
+                This is <strong>strong</strong>.<br>
+                This is <small>small</small>.<br>
+                This is <mark>mark</mark>.<br>
+                This is <sub>subscript</sub>.<br>
+                This is <sup>superscript</sup>.
+            </div>
+        </div>
+    </div>
+    
+    <!--lists-->
+    <div class="section">
+        <h3 id="Lists">11 | Lists</h3>
+        <p>
+            There are three types of HTML lists: <i>unordered</i>, <i>ordered</i>, and <i>description</i>. Unordered and ordered 
+            lists have marks that can be changed using <code class="attribute">type</code> for inline styling and <code class="attribute">
+            list-style-type</code> for external styling. <code>&ltli&gt</code> should be included to display the item.
+            <ul>
+                <li>
+                    <span>Unordered lists</span> are marked with <i>discs</i>, or the black circles by default. Some of its bullet 
+                    styles are <i>circle</i>, <i>square</i>, and <i>none</i>. Customizing bullets can be done inline either in the 
+                    <code>&ltul&gt</code> or <code>&ltli&gt</code> or internally or externally by targetting those elements.
+                </li>
+                <li>
+                    <span>Ordered lists</span> are marked with numbers by defalut. Some of its bullet styles are <i>upper-roman</i>, 
+                    <i>lower-roman</i>, <i>upper-alpha</i>, and <i>lower-alpha</i>. The starting mark can be changed using the 
+                    <code class="attribute">start</code> attribute.
+                </li>
+                <li>
+                    <span>Description lists</span> is for lists with terms, each with a description that is indented after the term. This uses
+                    <code>&ltdt&gt</code> and <code>&ltdd&gt</code> to display the term and the description respectively.
+                </li>
+            </ul>
+        </p>
+        <div class="terminal"> 
+            <div> <!--code-->
+<pre>
+<span class="comment">&lt!--unordered list--&gt</span>
+<span>&ltul&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+<span>&lt/ul&gt</span>
+<span class="comment">&lt!--ul with different bullets--&gt</span>
+<span>&ltul</span> <span class="attribute">type=</span><span class="value">"circle"</span><span>&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+    <span>&ltli</span> <span class="attribute">type=</span><span class="value">"square"</span><span>&gt</span>item<span>&lt/li&gt</span>
+    <span>&ltli</span> <span class="attribute">type=</span><span class="value">"none"</span><span>&gt</span>item<span>&lt/li&gt</span>
+<span>&lt/ul&gt</span>
+
+<span class="comment">&lt!--ordered list--&gt</span>
+<span>&ltol&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+    <span>&ltli&gt</span>item<span>&lt/li&gt</span>
+<span>&lt/ol&gt</span>
+
+<span class="comment">&lt!--description list--&gt</span>
+<span>&ltdl&gt</span>
+    <span>&ltdt&gt</span>HyperText Markup Language<span>&lt/dt&gt</span>
+    <span>&ltdd&gt</span>It is used for making websites.<span>&lt/dd&gt</span>
+<span>&lt/dl&gt</span>
+</pre>
+            </div>
+            <div> <!--code output-->
+                <ul>
+                    <li>item</li>
+                    <li>item</li>
+                </ul>
+                <ul type="circle">
+                    <li>item</li>
+                    <li type="square">item</li>
+                    <li type="none">item</li>
+                </ul>
+                <ol>
+                    <li>First step.</li>
+                    <li>Second step.</li>
+                    <li>Third step.</li>
+                </ol>
+                <dl>
+                    <dt>HyperText Markup Language</dt>
+                    <dd>It is used for making websites.</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+
+    
+    <!--====================CSS GUIDE====================-->
+    <div class="section">
+        <h2 id="CSS" class="headings">Cascading Style Sheets (CSS)</h2>
+        <div class="CSS-explain">
+            <p><!--description of css-->
+                CSS is the language used to style Web pages. It styles HTML elements by using selectors.<br>
+                There are four types of CSS styles: <b>inline</b>, <b>internal/embedded</b>, 
+                <b>external</b>, and <b>imported</b>.
+            </p>
+        </div>
+    </div>
+
+    <!--css syntax-->
+    <div class="section">
+        <h3 id="CSS Structure">CSS Structure</h3>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>Selector</span> {
+    <span class="attribute">Property</span>: <span class="value">value</span>;
+    <span class="attribute">Property</span>: <span class="value">value</span>;
+}
+</pre>
+            </div> 
+        </div>
+    </div>
+
+    <!--inline style-->
+    <div class="section">
+        <h3 id="Inline CSS">Inline CSS</h3>
+        <p>Inline is located at the body of the HTML document. It is better used for styling specific and only a few HTML tags.</p>
+        <div class="terminal">
+            <div>
+<pre>
+<span>&ltp</span> <span class="attribute">style=</span><span class="value">"color: pink; text-align: center;"</span><span>&gt</span>This is inline style.<span>&ltp&gt</span>
+</pre>
+            </div>
+        </div>
+    </div>
+    <!--internal-->
+    <div class="section">
+        <h3 id="Internal/Embedded CSS">Internal/Embedded CSS</h3>
+        <p>Internal/Embedded is located at the head of the HTML document. It is used for styling the whole document.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&ltstyle&gt</span>
+<span>p</span> {
+    <span class="attribute">color</span>: <span class="value">pink</span>;
+    <span class="attribute">text-align</span>: <span class="value">center</span>;
+}
+<span>&lt/style&gt</span>
+</pre>
+            </div>
+        </div>
+    </div>
+    <!--external style-->
+    <div class="section">
+        <h3 id="External CSS">External CSS</h3>
+        <p>
+            External is a separate text file linked to the HTML document. This allows for shorter HTML document and better 
+            readability for both files. The link is written at the head of the HTML document.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>&lthead&gt</span>
+    <span>&ltlink</span> <span class="attribute">rel=</span><span class="value">"stylesheet"</span> <span class="attribute">href=</span><span class="value">"FileName.css"</span><span>&gt</span>
+<span>&lt/head&gt</span>
+</pre>
+            </div>
+        </div>
+    </div>
+    <!--imported style-->
+    <div class="section">
+        <h3 id="Imported CSS">Imported CSS</h3>
+        <p>Imported is basically the same as external except this style allows for importing one style sheet into another.<br>
+        <small><i>Note! Some web creators use this style to hide their style sheets from viewers because older browsers cannot detect imports. 
+            If you want your web page design to work on all browsers, external style is recommended.
+        </i></small>
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>@import</span> (<span class="value">"FileName.css"</span>);
+</pre>
+or
+<pre>
+<span>@import</span> <span class="attribute">url</span>(<span class="value">"FileName.css"</span>);
+</pre>
+            </div>
+        </div>
+    </div>
+
+    <!--box model-->
+    <div class="section">
+        <h3 id="The Box Model">The Box Model</h3>
+        <div id="box-model">
+            <div>
+                <p>
+                    This wraps around every HTML element. It consists of the following:
+                    <ol>
+                        <li><span>Content</span> is where texts and images appear.</li>
+                        <li><span>Padding</span> is the transparent area between the content and border.</li>
+                        <li><span>Border</span> wraps around the padding and content.</li>
+                        <li><span>Margin</span> is the transparent area around the border.</li>
+                    </ol>
+                </p>
+                <p>The sides of the padding, border, and margin can be adjusted specifically or in one line. 
+                    The codes below are true to paddings, borders, and margins.</p>
+            </div>
+            <div>
+                <img src="img/box model.png">
+            </div>
+        </div>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span class="comment">/*changing value specifically*/</span>
+{
+<span class="attribute">margin-left</span>: <span class="value">10px</span>;
+<span class="attribute">margin-top</span>: <span class="value">5px</span>;
+<span class="attribute">margin-bottom</span>: <span class="value">15px</span>;
+<span class="attribute">margin-right</span>: <span class="value">10px</span>;
+} 
+<span class="comment">/*1 value: all sides are the same*/</span>
+{<span class="attribute">margin</span>: <span class="value">10px</span>;} 
+<span class="comment">/*4 values: all sides will be changed*/</span>
+{<span class="attribute">margin</span>: <span class="value">10px 5px 15px 10px</span>; <span class="comment">/*order: top, right, bottom, left*/</span>} 
+<span class="comment">/*3 values: for top, right-left, bottom*/</span>
+{<span class="attribute">margin</span>: <span class="value">20px 15px 5px</span>;}
+</pre>                    
+            </div>
+        </div>
+    </div>
+
+    <!--selectors-->
+    <div class="section">
+        <h3 id="Selectors">Selectors</h3>
+        <p>
+            Selectors target the elements to style them. There are different categories of selectors, but the most common 
+            one are the <i>simple selectors</i> which targets elements based on <b>name</b>, <b>ID</b>, and <b>class</b>.
+                <ul>
+                    <li><span>Element Selector</span> selects HTML elements based on the element name (body, h1, p, div...).</li>
+                    <li><span>ID Selector</span> selects HTML elements based on IDs or names preceded with a hashtag (#). 
+                        This can only be assigned to a single element.</li>
+                    <li><span>Class Selector</span> selects HTML elements based on classes or names preceded with a period. 
+                        This can be assigned to multiple elements.</li>
+                </ul>
+        </p>
+        <p>Remember that spaces are not allowed for ID and class names.<br>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span class="comment">/*element selector*/</span>
+<span>p</span> {
+<span class="attribute">text-decoration</span>: <span class="value">double</span>;
+}
+
+<span class="comment">/*id selector*/</span>
+<span>#container</span> {
+<span class="attribute">width</span>: <span class="value">100%</span>;
+}
+
+<span class="comment">/*class selector*/</span>
+<span>.section</span> {
+<span class="attribute">color</span>: <span class="value">white</span>;
+}
+</pre>
+            </div>
+        </div>
+    </div>
+
+    <!------------properties-------------->
+    <div class="section">
+        <h3 id="Properties">Properties & Values</h3>
+        <p>Properties are the attributes being styled and values are the setting of a property. 
+            The following are some of the common CSS properties and their values.</p>
+    </div>
+
+    <!--width height-->
+    <div class="section">
+        <h3 id="Width & Height">Width & Height</h3>
+        <p>The width adjusts the horizontal size and the height adjusts the vertical size of a content.</p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>img</span> {
+    <span class="attribute">width</span>: <span class="value">700px</span>;
+    <span class="attribute">height</span>: <span class="value">500px</span>;
+}    
+</pre>
+            </div>
+            <div> <!--code output-->
+                <img src="img/toro duck.jpg" width="400px" height="200px">
+            </div>
+        </div>
+    </div>
+
+    <!--color + bg color-->
+    <div class="section">
+        <h3 id="Color">Color & Background Color</h3>
+        <p>
+            Color changes color of the foreground (usually texts) and background color changes the color of the background. 
+            Both accept different value formats such as name, RGB, and HEX.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span class="comment">/*name value*/</span>
+<span>.p1</span> {
+    <span class="attribute">color</span>: <span class="value">green</span>;
+    <span class="attribute">background-color</span>: <span class="value">lightgreen</span>;
+}
+<span class="comment">/*rgb value*/</span>
+<span>.p2</span> {
+    <span class="attribute">color</span>: <span class="value">rgb(0, 43, 128)</span>;
+    <span class="attribute">background-color</span>: <span class="value">rgb(144, 207, 238)</span>;
+}
+<span class="comment">/*hex value*/</span>
+<span>.p3</span> {
+    <span class="attribute">color</span>: <span class="value">#800071</span>;
+    <span class="attribute">background-color</span>: <span class="value">#ee91c9</span>;
+}
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p style="color: green; background-color: lightgreen;">This a green text with a lightgreen background.</p><br><br><br>
+                <p style="color: rgb(0, 43, 128); background-color: rgb(144, 207, 238);">This text used RGB values.</p><br><br><br>
+                <p style="color: #800071; background-color: #ee91c9;">This used HEX values.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--bg image-->
+    <div class="section">
+        <h3 id="Background Image">Background Image</h3>
+        <p>
+            This allows for images to be used as background by putting the image name in the <code class="value">url()</code>. 
+            Gradients are also values for background image. <code class="value">linear-gradient()</code> is for gradients with directions, 
+            <code class="value">radial-gradient()</code> is for gradients with an ellipse or circle, and <code class="value">conic-gradient()</code> 
+            is for gradients with color transitions rotated around a center point.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>.image-bg</span> {<span class="attribute">background-image</span>: <span class="value">url(</span><span class="value2">bg img.png</span><span class="value">)</span>;}
+
+<span>.linear-gradient</span> {
+    <span class="attribute">background-image</span>: <span class="value">linear-gradient(</span><span class="value2">to bottom right</span>, <span class="value2">pink</span>, 
+    <span class="value2">lightyellow</span><span class="value">)</span>;
+}
+
+<span>.radial-gradient</span> {
+    <span class="attribute">background-image</span>: <span class="value">radial-gradient(</span><span class="value2">darkblue</span>, <span class="value2">orange</span>, <span class="value2">red</span>,
+    <span class="value2">blue</span><span class="value">)</span>;
+}
+
+<span>.conic-gradient</span> {
+    <span class="attribute">background-image</span>: <span class="value">conic-gradient(</span><span class="value2">#756AB6</span>, <span class="value2">#AC87C5</span>, <span class="value2">#E0AED0</span>,
+    <span class="value2">#FFE5E5</span><span class="value">)</span>;
+}
+
+
+
+</pre>
+            </div>
+            <div> <!--code output-->
+                <div id="img-bg">
+                    <p>This has an image background.</p>
+                </div>
+                <div id="Lgradient-bg">
+                    <p>Linear-gradient background.</p>
+                </div>
+                <div id="Rgradient-bg">
+                    <p>Radial-gradient background.</p>
+                </div>
+                <div id="Cgradient-bg">
+                    <p>Conic-gradient background.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--borders-->
+    <div class="section">
+        <h3 id="Borders">Border & Border Radius</h3>
+        <p>
+            Border wraps the content in outlines and border radius adjusts the roundness of the corners of the border.
+            The border's values consists of the thickness, the style, and the color.
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>.border-ex1</span> {<span class="attribute">border</span>: <span class="value">5px dotted cornflowerblue</span>;}
+<span>.border-ex2</span> {
+    <span class="attribute">border</span>: <span class="value">2px solid blueviolet</span>;
+    <span class="attribute">border-radius</span>: <span class="value">10px</span>;
+}
+<span class="comment">/*4 values: for top-left, top-right, bot-right, bot-left*/</span>
+<span>.four-values</span> {
+    <span class="attribute">border</span>: <span class="value">3px solid lightskyblue</span>;
+}
+<span class="comment">/*3 values: top-left, top-right-bot-left, bot-right*/</span>
+<span>.three-values</span> {
+    <span class="attribute">border</span>: <span class="value">3px solid lightseagreen</span>;
+    <span class="attribute">border-radius</span>: <span class="value">10px 5px 30px</span>;
+}
+</pre>
+            </div>
+            <div> <!--code output-->
+                <div id="border">
+                    <p id="border-ex1">This content has a 5 pixel thick, cornflower blue, dotted border.</p>
+                    <p id="border-ex2">This content has a 2 pixel thick, brown, solid border with rounded corners.</p>
+                    <div id="borrad1"></div>
+                    <div id="borrad2"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Text Properties-->
+    <div class="section">
+        <h3 id="Text Properties">Text Properties</h3>
+        <p>
+            These are attributes for texts. The following are the common text properties.
+            <ul>
+                <li><span>Text Align</span> sets the horizontal alignment of the text. The default text alignment is left.</li>
+                <li><span>Text Decoration</span> is the shorthand property of the following text decoration properties with some of their values:</li>
+                    <ul>
+                        <li><span>text-decoration-line</span>: <i>underline</i>, <i>overline</i>, <i>line-through</i>.</li>
+                        <li><span>text-decoration-color</span> is the color of the text decoration. It does not affect the color of the text itself.</li>
+                        <li><span>text-decoration-style</span>: <i>solid (default)</i>, <i>dotted</i>, <i>dashed</i>, <i>wavy</i>.</li>
+                        <li><span>text-decoration-thickness</span>: any format of numbers.</li>
+                    </ul>
+                <li><span>Line Height</span> is the vertical spacing of different lines of texts. The default line height is <i>1.2</i> or <i>120%</i> 
+                    although it also depends on the font family.</li>
+            </ul>
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>.line-height</span> {<span class="attribute">line-height</span>: <span class="value">15px</span>;}
+
+<span>.center</span> {<span class="attribute">text-align</span>: <span class="value">center</span>;}
+
+<span>.right</span> {<span class="attribute">text-align</span>: <span class="value">right</span>;}
+
+<span>.justify</span> {<span class="attribute">text-align</span>: <span class="value">justify</span>;}
+
+<span>.text-decor</span> {
+    <span class="attribute">text-decoration</span>: <span class="value">lightcoral overline wavy</span>; <span class="comment">/*text-decoration-
+    color + text-decoration-line + text-decoration-style*/</span>
+}
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p style="line-height: 15px;">This paragraph is in default left align and its line height is smaller than the next paragraphs.
+                    Aut architecto laudantium qui porro placeat aut laborum voluptas qui nesciunt eius et odio quibusdam rem 
+                    necessitatibus neque. Cum autem omnis non facilis quos id consequatur amet.</p>
+                <p style="text-align: center;">Centered text.</p>
+                <p style="text-align: right;">Right-aligned text.</p>
+                <p style="text-align: justify;">Justified text. Aut architecto laudantium qui porro placeat aut laborum voluptas qui nesciunt 
+                    eius et odio quibusdam rem necessitatibus neque. Cum autem omnis non facilis quos id consequatur amet.</p>
+                <p style="text-decoration: lightcoral overline wavy;">Nam asperiores repudiandae et dolor corrupti sit minus nihil ea quidem esse eum autem voluptate.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--font properties-->
+    <div class="section">
+        <h3 id="Font Properties">Font Properties</h3>
+        <p>
+            These are attributes of the font of the text.
+            <ul>
+                <li><span>Font</span> is the shorthand property for the following font properties with some of their values:</li>
+                <ul>
+                    <li><span>Font Family</span> specifies the text's font.<br>
+                    <small><i>Note! It is recommened to have at least two fonts in case the first one cannot be read by the browser.</i></small>
+                    </li>
+                    <li><span>Font Size</span> is the size of the font.</li>
+                    <li><span>Font Weight</span> is the boldness the font. The default font weight of headings is <i>bold</i> and other
+                        texts is <i>normal</i>. Some common values are: <i>100</i>, <i>light</i>, <i>400</i>, <i>normal</i>, <i>700</i>, <i>bold</i>.</li>
+                    <li><span>Font Style</span>: <i>normal (default)</i>, <i>italic</i>, <i>bold</i>, <i>oblique</i>.</li>
+                </ul>
+            </ul>
+        </p>
+        <div class="terminal">
+            <div> <!--code-->
+<pre>
+<span>p</span> {
+    <span class="attribute">font-family</span>: <span class="value">Arial, Helvetica, sans-serif</span>;
+    <span class="attribute">font-size</span>: <span class="value">30px</span>;
+    <span class="attribute">font-weight</span>: <span class="value">light</span>;
+    <span class="attribute">font-style</span>: <span class="value">italic</span>;
+}
+</pre>
+            </div>
+            <div> <!--code output-->
+                <p id="font-ex">This text is 30 pixels big, in Arial font (with Helvetica as a substitute font) with light weight and italic style.</p>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <small><table>
+        <tr>
+            <td class="me">by Precyleigh Caitlin J. Diokno | CC Year 1 Group 1<br><small>Copyright &copy; 2024</td>
+            <td class="sources">Sources</td>
+            <td>
+                <a href="https://www.w3schools.com/html/default.asp" target="_blank">W3Schools HTML</a>
+                <a href="https://www.w3schools.com/cssref/index.php" target="_blank">W3Schools CSS Reference</a><br>
+                <a href="https://www.pinterest.com/pin/621778292336461150/" target="_blank">Toro Shark Image</a>
+                <a href="https://www.pinterest.com/pin/621778292336461190/" target="_blank">Toro Duck Image</a>
+                <a href="https://www.pinterest.com/pin/621778292334017813/" target="_blank">Toro Wallpaper Image</a>
+            </td>
+        </tr>
+    </table></small>
+</footer>
+</html>

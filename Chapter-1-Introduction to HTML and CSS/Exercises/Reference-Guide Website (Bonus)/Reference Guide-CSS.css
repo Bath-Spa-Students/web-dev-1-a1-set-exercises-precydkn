@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
+/*'Fira Sans' font*/
+@import url('https://fonts.googleapis.com/css2?family=Fira+Mono:wght@400;500;700&display=swap'); /*'Fira Mono' font*/
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #1E1E1E;
+    color: white;
+    line-height: 25px; /*adjusts space between lines so the border of <code>s isnt too close to the next line*/
+    margin: 0;
+}
+
+/*====================snap scroll====================*/
+html {/*applied to whole html document*/
+    scroll-snap-type: y mandatory; /*snap scroll by section name*/
+    height: 100vh; /*snap points are needed but because height of divs vary, full screen height was used instead*/
+    overflow-y: scroll; /*scrollbar for snap to work*/
+    scroll-behavior: smooth; /*smooth scrolling when jumping to sections*/
+}
+.section, .title, #HTML, #CSS {
+    scroll-snap-align: start; 
+    height: auto; /*doesn't break the page format if auto is used*/
+    scroll-margin-top: 38px; /*top margin when scroll snaps*/
+}
+
+/*====================title n about page====================*/
+.title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+.title h1 {
+    background-color: #404040;
+    font-weight: normal; /*removes boldness of heading*/
+    padding: 30px;
+    margin: 10px 115px 10px;
+    border-bottom: 1px solid white;
+}
+hr {width: 85%;}
+
+/*====================sections dropdown (✦)====================*/
+.✦ {
+    position: fixed; /*stays in position even when page is scrolled*/
+    margin: -125px 75px; /*top-bot, left-right*/
+}
+.✦ p {
+    font-size: 32px;
+    margin: 30px 0 0; /*top, lr, bot*/
+    padding-bottom: 10px;
+}
+.section-list {
+    display: none; /*links are initially hidden*/
+    width: 100px;
+    border: 2px solid #404040;
+    border-radius: 5px;
+}
+.section-list a {
+    display: block; /*displays each link in new line*/
+    text-decoration: none; /*removes underline*/
+    color:#b5b5b5;
+    transition: 0.3s; /*hover animations will not be abrupt*/
+}
+.✦ a:hover{color: #C58335;} /*change link color on hover*/
+.✦ span {/*html n css section list heading*/
+    text-align: center; 
+    color: white; 
+    display: block;
+    backdrop-filter: blur(10px); /*bg blur*/
+    margin: 0;
+    padding: 5px;
+    transition: 0.3s; /*hover animations will not be abrupt*/
+}
+.✦ span:hover {color: #866EC2;}
+.✦:hover .section-list {display: block;} /*display 'html' n 'css' on hover*/
+/*section pages by category (html or css)*/
+.HTML-content {
+    display: none; /*links are initially hidden*/
+    width: 165px;
+    position: absolute;
+    backdrop-filter: blur(10px); /*bg blur*/
+    border: 2px solid #404040;
+    border-radius: 5px;
+    margin: -36.5px 100px;
+    padding: 10px 20px;
+}
+.CSS-content {
+    display: none; /*links are initially hidden*/
+    width: 180px;
+    position: absolute;
+    backdrop-filter: blur(10px); /*bg blur*/
+    border: 2px solid #404040;
+    border-radius: 5px;
+    margin: -36.5px 100px;
+    padding: 10px 20px;
+}
+.HTML-list:hover .HTML-content, .CSS-list:hover .CSS-content {display: block;} /*display list on hover*/
+
+/*====================section headings====================*/
+.headings {/*'HTML' n 'CSS'*/
+    text-align: center;
+    font-weight: normal; /*remove boldness of heading*/
+    background-color: #616161;
+    padding: 30px;
+    margin: 50px 115px 0; /*top, left-right, bot*/
+}
+.explain {/*explanations of HTML*/
+    background-color:#404040;
+    border: 10px solid #616161;
+    margin: 0 115px;
+    padding: 20px 130px;
+}
+.CSS-explain {/*explanations of CSS*/
+    background-color:#404040;
+    border: 10px solid #616161;
+    margin: 0 115px;
+    padding: 20px 230px;
+}
+.explain ul li { 
+    padding-left: 100px;
+    list-style-position: inside;
+}
+h3 {/*element headings*/
+    color: #C58335;
+    margin: 30px 110px 10px; /*top, left-right, bot*/
+    padding: 0 5px;
+} 
+p {/*explanation per element*/
+    margin: 0 110px; /*top-bot, left-right*/ 
+    padding: 0 5px; /*top-bot, left-right*/
+} 
+
+/*====================code examples====================*/
+.terminal {
+    display: flex;
+    padding: 5px 5px; /*top-bot, left-right*/
+    margin: 0 100px; /*top-bot, left-right*/
+    line-height: 22px; /*adjusts space between lines so the border of <code>s isnt too close to the next line*/
+}
+.terminal div {
+    background-color:#404040;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
+    border: 10px solid #616161;
+}
+.terminal p {margin: 10px 0;} /*code outputs (right box)*/
+.h3 {/*reset h3 format in code examples because all h3 are formatted for element headings*/
+    color: white;
+    margin-left: -115px;
+} 
+.section ul li {/*indenting list in 'Selectors' section*/
+    margin: 0 110px; /*top-bot, left-right*/ 
+    padding: 0 5px; /*top-bot, left-right*/
+}
+.section ul li span, ol li span {color: #C58335;} /*'Selectors' + 'The Box Model' section*/
+/*'div element' examples*/
+.terminal > div > .div-ex {
+    width: 80%;
+    padding: 20px;
+    border: 5px solid #E54073;
+    border-radius: 0;
+}
+.terminal > div > .div-ex2 {
+    background-color: lightpink;
+    color: #404040;
+    width: 80%;
+    padding: 20px;
+    border: none;
+    border-radius: 0;
+}
+.terminal ul li, ol li {margin: 0; padding: 0;}
+/*'background-image' examples*/
+#img-bg {
+    background-image: url(img/toro\ wallppr.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    color:darkkhaki;
+    text-align: center;
+    width: 50%; 
+    height: 50%;
+    border: none;
+    margin: 0;
+}
+#Lgradient-bg {
+    background-image: linear-gradient(to bottom right, pink, lightyellow);
+    width: 60%;
+    color:darkblue;
+    border: none;
+    margin: -80px 0 0; /*top, lr, bot*/
+    text-align: center;
+}
+#Rgradient-bg {
+    background-image: radial-gradient(darkblue, orange, red, blue);
+    width: 60%;
+    border: none;
+    margin: 10px 0 0; /*top, lr, bot*/
+    text-align: center;
+}
+#Cgradient-bg {
+    background-image: conic-gradient(#756AB6, #AC87C5, #E0AED0, #FFE5E5);
+    width: 60%;
+    color:darkblue;
+    border: none;
+    margin: 10px 0 0; /*top, lr, bot*/
+    text-align: center;
+}
+/*'the box model' examples*/
+#box-model {display: flex;}
+#box-model div {width: 100%;}
+#box-model div > ol li {/*indenting list in 'The Box Model' section*/
+    margin: 0 110px; /*top-bot, left-right*/ 
+    padding: 0 5px; /*top-bot, left-right*/
+}
+#box-model div img {width: 60%; margin-top:-30px;} /*box model image*/
+/*'Border & Border Radius' section*/
+#border {
+    border: none;
+    width: fit-content;
+    margin: 0;
+    padding: 0;
+}
+#border #border-ex1 {border: 5px dotted cornflowerblue; margin-bottom: 50px;}
+#border #border-ex2 {border: 2px solid blueviolet; border-radius: 10px;}
+#border #borrad1 {border: 3px solid lightskyblue; border-radius: 10px 5px 15px 20px; margin: 60px 0 0;}
+#border #borrad2 {border: 3px solid lightseagreen; border-radius: 10px 5px 30px; margin: 60px 0 0;}
+#font-ex {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: light;
+    font-style: italic;
+    line-height: normal;
+}
+
+/*====================teminal coding====================*/
+span{color: #866EC2;} /*for tags*/
+.attribute {color: #E54073;} 
+.value {color: #6BABBA;}
+.comment {color:gray;}
+.value2 {color: #B4B347;}
+pre {
+    font-family: 'Fira Mono', monospace;
+    font-size: 14px;
+    white-space: pre-wrap; /*so content in <pre> follows flex width*/
+}
+/*tags used in paragraphs*/
+code {
+    color: #866EC2;
+    padding: 2px 3px; /*top-bot, right-left*/
+    border: 2px solid;
+    border-radius: 3px;
+    font-weight: bold;
+}
+code .attribute {
+    color: #E54073;
+    padding: 2px 3px; /*top-bot, right-left*/
+    border: 2px solid;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+/*====================footer====================*/
+footer {
+    background-color: #404040;
+    padding: 30px;
+    margin: 50px 115px 0;
+    border-top: 1px solid white;
+    height: 45px;
+}
+footer table, td{margin: 0 auto; vertical-align: top;}
+.me {width: 400px;} /*my name + copyright*/
+.sources {width: 50px;} /*'Sources'*/
+footer a {/*link sources*/
+    text-decoration: none; /*remove underline*/
+    color: #b5b5b5; /*change color*/
+    margin: 0 10px; /*top-bot, lr*/
+    transition: 0.3s;
+}
+footer a:hover{color: #756AB6;}
