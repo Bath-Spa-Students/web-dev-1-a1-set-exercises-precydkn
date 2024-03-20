@@ -1,0 +1,53 @@
+body, footer {
+    font-family: Arial, Helvetica, sans-serif; /*Arial font*/
+    font-size: 24px;
+    margin: 0; /*so elements touch the edge of the webpage*/
+}
+header, h2 {font-family: Tahoma, "Trebuchet MS", sans-serif; font-weight: 700; /*700=bold*/} /*Tahoma font for header, and headings*/
+h1, h2 {text-decoration: underline;} /*underline h1, h2*/
+
+/*==========header==========*/
+header {
+    background-color: #17072b;
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 10px 10px 20px;
+}
+header a {/*navbar*/
+    color: white;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: normal;
+    margin: 5px 10px;
+}
+
+/*==========flex container 'welcome', 'line up'==========*/
+.content {display: flex; /*so main and aside are beside each other*/}
+
+/*=========='welcome' section==========*/
+.welcome {width: 61.2%; padding: 0 30px; /*TB-RL*/}
+.welcome img {width: 100%; vertical-align: bottom; /*removes the tiny space at bot*/}
+
+/*=========='line up' section==========*/
+.line-up {
+    background-color: #172d67;
+    color: white;
+    padding: 0 40px 30px; /**/
+    margin: 10px 0 10px auto; /*T-R-B-L (L=auto to right align section)*/
+    width: 450px;
+}
+.line-up ul {/*list*/
+    list-style-type: none; /*remove list bullet*/ 
+    padding: 0; /*remove left indention*/
+    line-height: 60px; /*make vertical spacing bigger*/
+}
+.line-up img {width: 220px; margin-top: 20px;} /*2 images*/
+
+/*==========footer==========*/
+footer {
+    background-color: #8c15e9;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
