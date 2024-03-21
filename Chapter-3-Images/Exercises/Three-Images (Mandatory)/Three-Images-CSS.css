@@ -2,42 +2,52 @@
 body{
     font-family: 'Averia Serif Libre', serif;
     text-align: center;
-    background-color: darkkhaki;
+    background-color: #dbd4c2;
 }
+.title {color:#55372c;} /*'Bread' color*/
 .flex {display: flex;} /*aligning images horizontally*/
+
+/*==========figcaptions==========*/
 figcaption {
     text-align: center;
     margin-top: 30px;
 }
-span {/*for img captions*/
+.captions {/*for img captions*/
     font-size: 24px;
     display: block; /*so no need for <br> after caption*/
+    margin-bottom: 10px;
 }
 a{/*link format*/
-    color: darkolivegreen;
-    text-decoration: none;
+    color: #C0A077;
+    text-decoration: none; /*remove underline*/
+    transition: 0.2s; /*so size change is smooth on hover*/
 }
 a:hover{/*link when hovered*/
-    color: forestgreen;
-    font-size: 16px;
+    color: #976532;
+    font-size: 16px; /*increase font size*/
 }
 
 h1 {
-    font-size: 40px;
+    font-size: 40px; /*increase size*/
     animation: title-appear 1.5s; /*animation-name, duration*/
 }
 img {width: 100%;} /*adjusting full size of image to not exceed the div*/
+
+/*==========image filters==========*/
 .left {/*filters for left img*/
-    filter: drop-shadow(-20px 20px 30px black) hue-rotate(35deg); /*shadow is at bot-left; light becomes cooler and greener*/
+    /*shadow is at bot-left, contrast made it look cloudy, lessened saturation*/
+    filter: drop-shadow(-20px 20px 30px #876C50) contrast(80%) saturate(80%); 
 }
 .mid {/*filters for middle img*/
-    filter: drop-shadow(0 20px 30px black) hue-rotate(55deg); /*shadow is at bot; light becomes cooler and greener*/
+    /*shadow is at bot, contrast made it look cloudy, lessened saturation*/
+    filter: drop-shadow(0 20px 30px #876C50) contrast(80%) saturate(70%);
 }
 .right {/*filters for right img*/
-    filter: drop-shadow(20px 20px 30px black) hue-rotate(55deg); /*shadow is at bot-right; light becomes cooler and greener*/
+    /*shadow is at bot-right, contrast made it look cloudy, lessened saturation*/
+    filter: drop-shadow(20px 20px 30px #876C50) contrast(80%) saturate(70%); 
 }
 
-/*for div (so figcaptions are included in animation)*/
+/*==========for div (so figcaptions are included in animation)==========*/
 #left {animation: appear 2s;} /*left img*/
 #mid {/*middle img*/
     opacity: 0; /*so it's invisible upon load*/
@@ -60,8 +70,8 @@ img {width: 100%;} /*adjusting full size of image to not exceed the div*/
     to {opacity: 100%; transform: translate(0,0);} /*title will be fully opaque and at the intended position*/
 }
 
-hr {
-    border: 1px solid darkolivegreen; /*change hr appearance*/
+hr {/*change hr appearance*/
+    border: 1px solid #55372c; 
     width: 500px; /*make it short*/
     margin-top: 100px;
     margin-bottom: 30px;
