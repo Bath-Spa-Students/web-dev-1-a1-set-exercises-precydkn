@@ -1,0 +1,82 @@
+body {/*format all content*/
+    background-color: #2b2b2b; 
+    text-align: center;
+    font-family: Tahoma, sans-serif;
+    color: white;
+}
+h1 {/*make h1 bigger and orange*/
+    font-size: 50px; 
+    margin: 0 0 10px;
+    color: orange;
+}
+hr {/*shorter + orange hr*/
+    width: 40%; 
+    margin: 0 auto 30px; 
+    border: 1px solid #ea8100;
+}
+input {
+    font-size: 22px; /*bigger font*/
+    color: orange;
+    background-color: transparent; /*no bg color*/
+    border-radius: 10px; /*round corners*/
+    padding: 5px 0 5px 20px; /*T, R, B, L*/
+}
+input:focus{box-shadow: 0 0 10px orange;} /*glow effect on-click*/
+button{/*make button bigger*/
+    font-family: Tahoma, sans-serif;
+    font-size: 25px;
+    margin-top: 30px;
+    width: 180px;
+    height: 50px;
+    background-color: transparent; /*no bg color*/
+}
+button:hover {/*change color and add orange glow on hover*/
+    color: darkorange;
+    box-shadow: 0 0 10px orange;
+}
+
+.calc {/*container to put divs on top of each other*/
+    background-color: gray;
+    width: 1300px;
+    height: 400px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 5px solid #ea8100;
+    display: block; /*puts the divs on top of each other*/
+    /*center content vertically and horizontally*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-50%) translateX(-50%);
+}
+.input_cost {/*container to put 'input' & 'cost' divs beside each other*/
+    display: flex; 
+    justify-content: center;
+} 
+.input_cost div {/*'input' & 'cost' divs format*/
+    background-color: #2b2b2b;
+    border-radius: 10px; 
+    width: 100%;
+    height: 280px;
+    margin: 10px;
+}
+.input p {/*'Petrol price per litre' & 'Litre' text format*/
+    font-size: 30px; 
+    margin: 10px 160px; 
+    text-align: left;
+}
+
+.cost p {font-size: 50px; margin: 40px;} /*for 'Total Cost' + 'cost' bigger text*/
+#cost {
+    text-decoration: underline; /*underline cost*/
+    text-shadow: 0 0 10px orange; /*make text glow*/
+} 
+
+footer {
+    position: absolute; /*to format footer with calculator having absolute position*/
+    bottom: 30px; /*puts content at the bottom of the calculator which has absolute position*/
+    width: 99%; /*centers content w/ absolute position*/
+}
+a {text-decoration: none; color: orange;} /*no underline, orange link*/
+a:hover{color: gray;} /*link is gray on hover*/

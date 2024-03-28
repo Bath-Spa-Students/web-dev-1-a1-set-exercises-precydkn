@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Petrol Calculator</title>
+    <link rel="icon" type="image--" href="petrol.png"><!--icon beside page title-->
+    <link rel="stylesheet" href="style.css"><!--linking css-->
+    <script src="index.js"></script><!--linking js-->
+</head>
+<body>
+    <div class="calc">
+        <div><h1>Petrol Calculator</h1> <hr></div>
+        <div class="input_cost">
+            <div class="input">
+                <p>Petrol price per litre</p>
+                <input id="price" type="number" placeholder="1.72">
+                <p>Litre</p>
+                <input id="litre" type="number" placeholder="1"><br>            
+                <button id="btn" onclick="calculateCost()">Calculate Cost</button><!--button to calculate amount-->
+            </div>
+            <div class="cost">
+                <p>Total Cost: <p id="cost"></p></p>
+            </div>
+        </div>
+    </div>
+    <footer><small>&copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Grp 1 <br><a href="https://www.freepik.com/icon/gas-pump_784884" target="_blank">Icon</a></small></footer>
+</body>
+</html>
