@@ -1,0 +1,48 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover; /*takes screen size*/
+    color: white; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px blue; /*offset, blur radius, color*/
+    margin-bottom: 50px;
+} 
+
+.center {/*centers all elements vertically and horizontally even when site is fullscreen*/
+    position: absolute;
+    top: 50%; /*adds top space*/
+    transform: translateY(-50%); /*removes top space*/
+    margin-left: 20px;
+}
+button {/*button style*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    width: 22%;
+    padding: 80px 0; /*TOP-BOT, LR*/
+    margin: 0 20px 20px; /*T, LR, B*/
+    color: gray;
+    background-color: transparent;
+    backdrop-filter: blur(10px); /*blur transparent bg*/
+    border: 3px solid darkblue;
+    border-radius: 10px;
+    transition: 0.2s; /*changes on hover are smooth*/
+}
+button:hover {/*button style on hover*/
+    background-color: darkblue;
+    border: 3px solid blue;
+    color: white;
+    box-shadow: 0 0 30px skyblue; /*offset, blur radius, color*/
+}
+
+footer {
+    margin-top: 50px; 
+    color: gray;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; /*change footer font*/
+}
+a {color: gray; text-decoration: none; margin: 0 10px;} /*gray, no underline link*/
+a:hover {color: blue;} /*link is blue on hover*/
