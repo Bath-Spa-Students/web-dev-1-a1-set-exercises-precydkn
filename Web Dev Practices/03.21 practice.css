@@ -1,0 +1,32 @@
+/*==========Div Practice==========*/
+body {
+    margin-right: auto;
+    margin-left: auto;
+    width: 80%;
+}
+
+#test1 {
+    border: 2px solid black;
+    width: 200px;
+    height: 100px;
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: blueviolet;
+}
+
+#test2 {
+    border: 2px solid black;
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    background-color: blue;
+    box-sizing: border-box; /*box-sizing: for resizing divs*/
+}
+
+/*==========Nav Practice==========*/
+nav ul {list-style-type: none;} /*remove bullets*/
+nav a { 
+    text-decoration: none; /*remove underline*/
+    padding-right: 10px; 
+}
+nav li {display: inline;} /*align links horizontally*/

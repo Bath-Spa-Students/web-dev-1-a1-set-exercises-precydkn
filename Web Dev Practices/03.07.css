@@ -1,0 +1,23 @@
+h1 {
+    border: 3px solid red;
+    border-radius: 5px 15px;
+    display: inline;
+}
+
+/*for shadow*/
+#wrapper {
+    box-shadow: 10px 10px 10px 10px gray;
+}
+
+/*opacity of text*/
+h2 {
+    background-color: aqua;
+    opacity: 0.4;
+}
+
+/*gradient*/
+body {
+    background-image: linear-gradient(blue, purple, pink);
+    background-repeat: no-repeat;
+    height: 1080px;
+}

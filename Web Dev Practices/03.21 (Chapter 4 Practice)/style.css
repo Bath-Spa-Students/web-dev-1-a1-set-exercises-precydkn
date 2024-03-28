@@ -1,0 +1,12 @@
+.instruction {
+    width: 60%;
+    float: left;
+}
+
+.images {
+    width: 30%;
+    float: right;
+}
+img {
+    width: 100%;
+}
