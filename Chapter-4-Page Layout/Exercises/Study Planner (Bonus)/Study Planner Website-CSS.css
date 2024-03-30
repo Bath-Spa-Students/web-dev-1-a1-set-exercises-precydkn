@@ -1,0 +1,191 @@
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+}
+/*====================GRID CONTAINER====================*/
+.body {
+    display: grid;
+    grid-template-columns: [col] 100px [col] auto; /*1st column is 100px, 2nd column occupies the rest of the space*/
+    grid-template-rows: [row] 90px [row] auto ; /*1st row is 90px, 2nd row occupies the rest of the space*/
+}
+
+/*==========TOP BAR==========*/
+.top {
+    grid-column: col 2 / span 2; /*div is positioned in the 2nd column, and covers the whole space*/
+    grid-row: row; /*div is positioned in row 1*/
+    background-color: #001055;
+    padding: 20px;
+    /*format text*/
+    display: flex;
+    align-items: center;
+    /*make it stay on scroll*/
+    position: sticky;
+    top: 0;
+}
+.top p, h1, form {display: inline;} /*put block-level elements in one line*/
+.top p {margin-right: auto; margin-left: -10px;} /*put User's Name to left*/
+form {margin-left: auto;} /*put Search Bar to right*/
+input { /*search bar*/
+    border-radius: 5px;
+    border: 2px solid #00429E;
+    padding-left: 5px;
+}
+input::placeholder {padding-left: 5px;} /*so placeholder isn't too close to border*/
+button img {width: 10px;} /*make Search Icon the same height as the Search Bar*/
+
+/*==========LEFT BAR==========*/
+.left {
+    grid-column: col; /*div is positioned at 1st column*/
+    grid-row: row 2 ; /*div is positioned at 2nd row*/
+    background-color: #001055;
+    position: fixed; /*keep it in place even when scrolling*/
+    height: 100vh; /*size is the same even when web is in fullscreen*/
+}
+.profile {
+    border-radius: 100%; /*make it circle*/
+    width: 60px;
+    margin: 20px 20px 0; /*T, RL, B*/
+}
+.menu img {/*'Home', 'Resources', 'Activities', 'Settings'*/
+    width: 30px; 
+    /*center icons*/
+    display: block;
+    margin: 40px auto 0; 
+}
+.left p {font-size: 12px; text-align: center;}/*smaller text*/
+
+/*====================MAIN====================*/
+.main {
+    grid-column: col 2 / span 2 ;
+    grid-row: row 2 ;
+    background-color: #E4F2F8;
+    padding: 50px 50px 20px; /*T, RL, B*/
+    color: black;
+}
+/*reduce space between Subject Name and Teacher Name*/
+h2 {font-size: 30px; margin: 0;}
+.teacher {margin-top: 5px;}
+
+/*TO DO + POMODORO TIMER*/
+.to_timer {display: flex; margin-bottom: 50px;} /*To Do, Pomodoro Timer container*/
+.todo { /*Calendar, To Do List container*/
+    background-color: white;
+    color: black;
+    display: flex;
+    padding: 20px 30px;
+    margin-right: 15px;
+    width: 750px;
+    border-radius: 10px;
+}
+/*Calendar*/
+.calendar {margin-right: 20px;}
+.month {
+    background-color: #e4dd14;
+    font-size: 25px;
+    padding: 1px 15px;
+}
+.dates {padding: 10px; background-color: #FCFFD6;} /*Table of Dates container*/
+table {
+    text-align: center; 
+    background-color: #FCFFD6;
+    border-collapse: collapse; /*remove lines*/
+    font-size: 14px;
+}
+th, tr, td {padding: 5px;}
+.today {/*'30'*/
+    border-radius: 100%;
+    background-color: #e4dd14;
+    padding: 5px;
+}
+.event {/*'31'*/
+    border-radius: 100%;
+    border: 2px solid #e4dd14;
+    padding: 5px;
+}
+/*To Do List*/
+.To_Do {font-size: 20px;}
+.todo_list {width: 100%;}
+ul {
+    list-style-type: none; /*remove list bullets*/
+    padding-left: 10px; /*decrease list indentation*/
+}
+.due { /*span for Due Date*/
+    font-size: small; 
+    color: gray;
+    margin-left: 20px;
+}
+/*Timer*/
+.timer {
+    background-color: white;
+    color: black;
+    padding: 20px 20px 0; /*T, RL, B*/
+    margin-left: 15px;
+    width: 450px;
+    border-radius: 10px;
+    text-align: center;
+}
+.focus_break p {/*'FOCUS & 'BREAK'*/
+    display: inline; 
+    margin: 20px;
+    font-size: 20px;
+    color: gray;
+}
+.focus p {/*'FOCUS'*/
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
+.time p {font-size: 70px; padding: 0; margin: 70px 0 10px;}
+.timer_options p {/*'05', '15', '60'*/
+    display: inline; 
+    margin: 0 15px; 
+    color: gray;
+}
+.selected_time p {/*'25'*/
+    color: black; 
+    border-bottom: 2px solid black;
+}
+.start p {font-weight: bold; margin-top: 60px;}
+
+/*==========LESSONS==========*/
+.lessons {display: flex; margin-bottom: 200px;} /*'HTML', 'CSS', 'JS' container*/
+.lessons div {
+    background-color: white;
+    padding: 20px;
+    color: black;
+    width: 200px;
+    height: 250px;
+    text-align: center;
+    border-radius: 10px; /*round corners*/
+    transition: 0.5s; /*smooth changes on hover*/
+}
+.lessons div .desc {/*hidden description*/
+    margin: -200px 200px 0;
+    display: none;
+}
+.lessons .css {margin: 0 20px;}
+.lessons img {width: 200px;}
+.lesson_name {
+    font-weight: bold;
+    transition: 0.6s; /*smooth transition changes*/
+}
+.lessons div:hover { /*div changes on hover*/
+    text-align: left;
+    width: 610px;
+    .desc {/*lesson description will appear*/
+        width: 400px;
+        margin: -210px 200px 0;
+        display: block;
+    }
+    .lesson_name {/*lesson name will adjust a bit*/
+        margin-left: 20px;
+        display: block;
+    }
+}
+
+hr {margin-bottom: 20px;}
+footer {text-align: right; line-height: 20px;}
+footer p, a {display: inline; margin-left: 15px;}
+a {color: #001055; text-decoration: none;}
+footer span {display: block;}

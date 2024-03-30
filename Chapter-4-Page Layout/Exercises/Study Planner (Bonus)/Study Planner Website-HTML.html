@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Study Planner Website-CSS.css">
+</head>
+<body>
+    <div class="body">
+        <!--~~~~~~~~~~~~~~~~~~~~NAVBARS~~~~~~~~~~~~~~~~~~~~-->
+        <div class="top">
+            <p>Precyleigh Caitlin J. Diokno</p><!--user's name-->
+            <h1>Study Planner</h1><!--title-->
+            <!--search bar-->
+            <form>
+                <input type="text" placeholder="Search"><button><img src="img/Search.png"></button>
+            </form>
+        </div>
+        <div class="left">
+            <img class="profile" src="img/profile.jpg" alt="Profile Picture"><!--profile picture-->
+            <div class="menu">
+                <img src="img/Home.png"><p>Home</p><!--home button-->
+                <img src="img/Read.png"><p>Resources</p><!--resources button-->
+                <img src="img/Clipboard.png"><p>Activities</p><!--activities button-->
+            </div>
+        </div>
+
+        <!--~~~~~~~~~~~~~~~~~~~~MAIN~~~~~~~~~~~~~~~~~~~~-->
+        <div class="main">
+            <h2>Web Development I</h2><!--subject name-->
+            <p class="teacher">Ms. Rafia Murtaza</p><!--teacher name-->
+    
+            <!--~~~~~~~~~~TO DO + POMODORO TIMER~~~~~~~~~~-->
+            <div class="to_timer">
+                <div class="todo"><!--calendar, to do list container-->
+                    <!--calendar-->
+                    <div class="calendar">
+                        <div class="month"><p>March</p></div><!--month-->
+                        <div class="dates"><!--dates-->
+                            <table>
+                                <tr><!--days of the week-->
+                                    <th>SUN</th>
+                                    <th>MON</th>
+                                    <th>TUE</th>
+                                    <th>WED</th>
+                                    <th>THU</th>
+                                    <th>FRI</th>
+                                    <th>SAT</th>
+                                </tr>
+                                <!--days-->
+                                <tr><!--week1-->
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1</td>
+                                    <td>2</td>
+                                </tr>
+                                <tr><!--week2-->
+                                    <td>3</td>
+                                    <td>4</td>
+                                    <td>5</td>
+                                    <td>6</td>
+                                    <td>7</td>
+                                    <td>8</td>
+                                    <td>9</td>
+                                </tr>
+                                <tr><!--week3-->
+                                    <td>10</td>
+                                    <td>11</td>
+                                    <td>12</td>
+                                    <td>13</td>
+                                    <td>14</td>
+                                    <td>15</td>
+                                    <td>16</td>
+                                </tr>
+                                <tr><!--week4-->
+                                    <td>17</td>
+                                    <td>18</td>
+                                    <td>19</td>
+                                    <td>20</td>
+                                    <td>21</td>
+                                    <td>22</td>
+                                    <td>23</td>
+                                </tr>
+                                <tr><!--week5-->
+                                    <td>24</td>
+                                    <td>25</td>
+                                    <td>26</td>
+                                    <td>27</td>
+                                    <td>28</td>
+                                    <td>29</td>
+                                    <td><span class="today">30</span></td>
+                                </tr>
+                                <tr><td><span class="event">31</span></td></tr><!--week6-->
+                            </table>
+                        </div>
+                    </div>
+                    <!--to do list-->
+                    <div class="todo_list">
+                        <p class="To_Do">To Do!</p>
+                        <ul>
+                            <li><input type="checkbox">Chapter 5 Bonus Exercise<br><span class="due">DUE: March 31, 2024 (SUN)</span></li><hr>
+                            <li><input type="checkbox">Chapter 6 Bonus Exercise<br><span class="due">DUE: April 5, 2024 (FRI)</span></li><hr>
+                            <li><input type="checkbox">Assessment 1 PPT<br><span class="due">DUE: April 5, 2024 (FRI)</span></li><hr>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timer"><!--pomodoro timer-->
+                    <span class="focus_break"><span class="focus"><p>FOCUS</p></span><p>BREAK</p></span>
+                    <span class="time"><p>25:00</p></span>
+                    <span class="timer_options"><p>05</p><p>15</p> <span class="selected_time"><p>25</p></span><p>60</p></span><br>
+                    <span class="start"><p>START</p></span>
+                </div>
+            </div>
+
+            <!--~~~~~~~~~~LESSONS~~~~~~~~~~-->
+            <h3>Lessons</h3>
+            <div class="lessons">
+                <div><!--html-->
+                    <img src="img/html.png" alt="HTML file logo"><p class="lesson_name">Introduction to HTML</p>
+                    <p class="desc">
+                        HTML is the standard language used to create and design web pages. It serves as the backbone of web content, employing tags to structure text, embed images, create links, and organize information within a webpage. It provides a standardized format for browsers to interpret and display content consistently across various devices and platforms.
+                    </p>
+                </div>
+                <div class="css"><!--css-->
+                    <img src="img/css.png" alt="CSS file logo"><p class="lesson_name">Introduction to CSS</p>
+                    <p class="desc">
+                        CSS is a style sheet language that enhances the presentation of HTML documents, enabling designers to control the layout, colors, fonts, and other visual aspects of a webpage. Through its rules and selectors, developers can create elegant and responsive designs, ensuring a cohesive and visually appealing user experience across different screen sizes and resolutions.
+                    </p>
+                </div>
+                <div><!--js-->
+                    <img src="img/js.png" alt="JS file logo"><p class="lesson_name">Introduction to JavaScript</p>
+                    <p class="desc">
+                        JavaScript is a versatile scripting language primarily used for adding interactivity and dynamic behavior to web pages, enabling developers to create interactive elements such as form validation, interactive maps, animated elements, and real-time updates; manipulate content, and much more within a browser environment.
+                    </p>
+                </div>
+            </div>
+
+            <!--~~~~~~~~~~~~~~~~~~~~SOURCES~~~~~~~~~~~~~~~~~~~~-->
+            <footer><hr>
+                <small>
+                &copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Gr 1<br>
+                <p>Icons</p><a href="https://iconscout.com/3d-illustration/html-file-6460807" target="_blank">HTML</a>
+                <a href="https://iconscout.com/3d-illustration/css-file-6735059" target="_blank">CSS</a>
+                <a href="https://iconscout.com/3d-illustration/java-script-file-6460811">JS</a>
+                <span><a href="https://www.pinterest.com/pin/621778292336461145/" target="_blank">Profile Picture</a></span>
+            </small></footer>
+      </div>
+</body>
+</html>
