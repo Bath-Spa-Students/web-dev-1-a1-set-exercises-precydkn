@@ -12,8 +12,11 @@ html{
 body { /*whole page format*/
     background-color: #CBDDF3; 
     background-image: linear-gradient(#CBDDF3, #234189);
-    height: 100vh; /*bg will cover the whole screen even when content is short*/
+    height: 100%;
     font-family: "Work Sans", sans-serif;
+}
+.sour, .prod {/*fixes 'Sources' & 'Production' pages' bg format but does not ruin the rest of the pages' bg*/
+    height: 100vh; /*bg will cover the whole screen even when content is short*/
 }
 
 /*==========navbar==========*/
