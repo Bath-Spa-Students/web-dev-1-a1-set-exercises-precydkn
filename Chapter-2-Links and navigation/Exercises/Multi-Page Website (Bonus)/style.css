@@ -12,7 +12,7 @@ html{
 body { /*whole page format*/
     background-color: #CBDDF3; 
     background-image: linear-gradient(#CBDDF3, #234189);
-    background-repeat: no-repeat; /*for developing purposes*/
+    height: 100vh; /*bg will cover the whole screen even when content is short*/
     font-family: "Work Sans", sans-serif;
 }
 
