@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alan Partridge Soundboard</title>
+    <link rel="stylesheet" href="style.css"><!--linking css-->
+    <link rel="icon" type="image--" href="icon.png"><!--icon beside page title-->
+</head>
+<body>
+    <div class="center">
+        <div class="flex">
+            <div class="text_to_speech">
+                <div><h1>Text to Speech</h1></div>
+                <textarea name="" id="speak_text" placeholder="Text to speak"></textarea>
+                <button type="button" onclick="textToAudio()">Speak</button>
+            </div>
+            
+            <div class="soundboard">
+                <div><h1>Alan Partridge Soundboard</h1></div>
+                <!--buttons of audio-->
+                <!--playAudio() = function in js to play audios
+                    this.id = id of the button clicked-->
+                <button id="ah-ha" onclick="playAudio(this.id)">ah-ha</button> 
+                <button id="back-of-the-net" onclick="playAudio(this.id)">back-of-the-net</button>
+                <button id="bangoutoforder" onclick="playAudio(this.id)">bangoutoforder</button>
+                <button id="dan" onclick="playAudio(this.id)">dan</button>
+                <button id="emailoftheevening" onclick="playAudio(this.id)">emailoftheevening</button>
+                <button id="hellopartridge" onclick="playAudio(this.id)">hellopartridge</button>
+                <button id="iateascotchegg" onclick="playAudio(this.id)">iateascotchegg</button>
+                <button id="imconfused" onclick="playAudio(this.id)">imconfused</button>
+            </div>
+        </div>
+        <div>
+            <footer>
+                <small>&copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Gr 1<br>
+                <a href="https://www.pinterest.com/pin/26036504089428725/" target="_blank">Image Source</a>
+                <a href="https://thenounproject.com/icon/soundboard-55440/">Icon</a></small>
+            </footer>
+        </div>
+    </div>
+    <script src="index.js"></script><!--linking js-->
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    background-image: url(bg.jpg);
+    background-size: cover; /*takes screen size*/
+    color: white; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.center {
+    /*center content vertically & horizontally*/
+    position: absolute;
+    top: 60%;
+    transform: translateY(-55%);
+    margin-left: 40px;
+}
+.flex {display: flex;}
+
+h1 {
+    font-size: 40px;
+    text-shadow: 0 0 10px blue; /*offset, blur radius, color*/
+    margin-bottom: 50px;
+} 
+
+.text_to_speech {width: 50%;}
+textarea {
+    background-color: darkblue;
+    width: 450px;
+    height: 300px;
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    color: white;
+    padding: 20px;
+    resize: none;
+}
+textarea::placeholder {color: gray;}
+textarea:focus {box-shadow: 0 0 30px skyblue;} /*add glow on click*/
+.text_to_speech button {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    width: 22%;
+    padding: 30px 0; /*TOP-BOT, LR*/
+    margin: 20px ; /*all sides*/
+    color: gray;
+    background-color: transparent;
+    backdrop-filter: blur(10px); /*blur transparent bg*/
+    border: 3px solid darkblue;
+    border-radius: 10px;
+    transition: 0.2s; /*changes on hover are smooth*/
+}
+
+.soundboard {width: 80%;}
+.soundboard button {/*button style*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    width: 22%;
+    padding: 60px 0; /*TOP-BOT, LR*/
+    margin: 0 20px 20px; /*T, LR, B*/
+    color: gray;
+    background-color: transparent;
+    backdrop-filter: blur(10px); /*blur transparent bg*/
+    border: 3px solid darkblue;
+    border-radius: 10px;
+    transition: 0.2s; /*changes on hover are smooth*/
+}
+button:hover {/*button style on hover*/
+    background-color: darkblue;
+    border: 3px solid blue;
+    color: white;
+    box-shadow: 0 0 30px skyblue; /*offset, blur radius, color*/
+}
+
+footer {
+    margin: 50px; 
+    color: gray;
+    font-family: Calibri, 'Trebuchet MS', sans-serif; /*change footer font*/
+}
+a {color: gray; text-decoration: none; margin: 0 10px;} /*gray, no underline link*/
+a:hover {color: blue;} /*link is blue on hover*/
