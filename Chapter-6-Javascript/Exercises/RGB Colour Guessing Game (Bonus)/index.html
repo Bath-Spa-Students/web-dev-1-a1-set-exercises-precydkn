@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess the RGB Colour!</title>
+    <link rel="stylesheet" href="style.css"><!--linking css-->
+    <!--icon beside page title-->
+</head>
+<body>
+    <div id="lives"></div><!--div to display lives-->
+    <!--game over screen that appears only when game ends-->
+    <div id="game_over">
+        <p>
+            <span class="over">Game Over!</span><br>
+            <span class="score">Score: <span id="number"></span></span><br>
+            <button id="play_again" onclick="restartGame()">Play Again</button>
+        </p>
+    </div>
+    <div id="overlay"></div><!--will darken the content below gameOverScreen-->
+    <div class="header">
+        <h1 id="check">Guess the RGB Colour!</h1><!--title-->
+        <h2 id="rgbCode"></h2><!--div to display rgb color code-->
+    </div>
+    <!--rectangles of colors-->
+    <div class="colors">
+        <div class="rect"></div><!--clr 1-->
+        <div class="rect"></div><!--clr 2-->
+        <div class="rect"></div><!--clr 3-->
+        <div class="rect"></div><!--clr 4-->
+    </div>
+
+    <div><footer><small>&copy; 2024 by Precyleigh Caitlin J. Diokno | CC Yr 1 Gr 1</small></footer></div>
+
+    <script src="index.js"></script><!--linking js-->
+</body>
+</html>
